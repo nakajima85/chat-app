@@ -2,23 +2,45 @@
   display: flex;
 }
 
+/* 左側 */
+
 .l-side{
   background-color: #253141;
   width: 300px;
   height: 100vh;
+  /* padding: 0 20px; */
 }
 
+/* 左側・上 */
 .side-top{
   height: 100px;
-  padding: 0, 20px;
+  /* background-color: #253141; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
+.user-name a{
+  font-size: 16px;
+  color: #fafafa;
+  text-decoration: none;
+}
+.create-chat a{
+  font-size: 10px;
+  color: deepskyblue;
+  border: 1px solid lightblue;
+  text-decoration: none;
+}
+
+/* 左側・下 */
 .side-main{
   background-color: #2f3e51;
   height: calc(100vh - 100px);
-  padding: 0, 20px;
+  padding: 0 20px;
 }
 
 
+/* 右側 */
 
 .r-main{
   background-color: #ffffff;
@@ -27,16 +49,16 @@
 }
 .main-top{
   height: 100px;
-  padding: 0, 40px;
+  padding: 0 40px;
 }
 .main-center{
   background-color: #fafafa;
   height: calc(100vh - 100px - 90px);
-  padding-top: 46px, 40px, 0;
+  padding-top: 46px 40px 0;
 
 }
 .main-under{
   background-color: #DDDDDD;
   height: 90px;
-  padding: 20px, 40px;
+  padding: 20px 40px;
 }
