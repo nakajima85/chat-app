@@ -37,6 +37,18 @@
   background-color: #2f3e51;
   height: calc(100vh - 100px);
   padding: 0 20px;
+  overflow: scroll;
+}
+.chat-room{
+  /* color: white; */
+  /* text-decoration: none; */
+  padding: 20px 0 40px;
+  /* overflow: scroll; */
+  /* display: block; */
+}
+.room-name a{
+  text-decoration: none;
+  color: white;
 }
 
 
