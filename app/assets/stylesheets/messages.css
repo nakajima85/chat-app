@@ -138,4 +138,39 @@
   background-color: #DDDDDD;
   height: 90px;
   padding: 20px 40px;
+  display: flex;
+}
+
+.under-input{
+  background-color: white;
+  display: flex;
+  width: 100%;
+}
+.input-form{
+  height: 50px;
+  width: 100%;
+  border: none;
+  padding-left: 10px;
+}
+.form-image {
+  font-size: 12px;
+  background-color: lightblue;
+  color: white;
+  padding: 12px;
+  width: 60px;
+  margin: 5px 10px;
+  text-align: center;
+}
+.hidden {
+  display: none;
+}
+
+.submit-form{
+  font-size: 16px;
+  color: white;
+  background-color: #38aef0;
+  padding: 0 20px;
+  margin-left: 15px;
+  height: 50px;
+  border: none;
 }
