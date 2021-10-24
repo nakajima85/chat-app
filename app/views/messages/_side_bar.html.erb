@@ -2,7 +2,8 @@
 <%# 上 %>
 <div class="side-top">
   <div class="user-name">
-    <a href="#">トム</a>
+    <%= link_to current_user.name, edit_user_path(current_user) %> 
+    <%# <a href="#">トム</a> %>
   </div>
   <div class="create-chat">
     <a href="#">チャットを作成する</a>
