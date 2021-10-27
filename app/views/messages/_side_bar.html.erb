@@ -6,28 +6,43 @@
     <%# <a href="#">トム</a> %>
   </div>
   <div class="create-chat">
-    <a href="#">チャットを作成する</a>
+    <%# <a href="#">チャットを作成する</a> %>
+    <%= link_to "チャットを作成する", new_room_path %>
   </div>
 </div>
 
 <%# 下 %>
-<%# <div class="side-main">
+
+ <%# 
+ <div class="side-main">
   <div class="chat-room-name">
     <a href="#">textroom1</a>
     <a href="#">textroom2</a>
   </div>
-</div> %>
+ </div> 
+ %>
+
 
 <div class="side-main">
-  <div class="chat-room">
-    <div class="room-name">
-      <a href="#">textroom1</a>
+  <% current_user.rooms.each do |room| %>
+    <div class="chat-room">
+      <div class="room-name">
+        <a href="#"><%= room.name %></a>
+      </div>
     </div>
+  <% end %>
+  
+
+
+ <%# 
+ <div class="chat-room">
+  <div class="room-name">
+    <a href="#">textroom2</a>
   </div>
-  <div class="chat-room">
-    <div class="room-name">
-      <a href="#">textroom2</a>
-    </div>
-  </div>
+ </div> 
+ %>
+
+
+
 </div>
 
