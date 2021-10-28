@@ -10,4 +10,5 @@ class User < ApplicationRecord
   has_many :room_users
   has_many :rooms, through: :room_users
   # 上記の２行、上・room_usersとのアソシエーション。下・中間テーブルを介してのRoomとのアソシエーション
+  has_many :messages
 end

@@ -17,6 +17,7 @@
 
 <%# 中 %>
 
+<%# ここから %>
 <div class="main-center">
   <div class="chat-text">
     <div class="text-users">
@@ -34,7 +35,6 @@
     </div>
   </div>
 
-<%# ここから %>
   <div class="chat-text">
     <div class="text-users">
       <div class="user-name">
@@ -56,6 +56,20 @@
 
 <%# 下 %>
 
+<%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
+  <div class="main-under">
+    <%= f.text_field :content, class: 'input-form', placeholder: "type a message" %>
+      <label class="form-image">
+        <span class="image-file">画像</span>
+        <%= f.file_field :image, class: 'hidden' %>
+      </label>
+    <%= f.submit "送信", class: "submit-form" %>
+  </div>
+<% end %>
+
+
+
+<%# 以下見た目のみの記述
 <div class="main-under">
   <div class="under-input">
     <input class="input-form" placeholder= "type a message">
@@ -66,3 +80,4 @@
   </div>
   <input class="submit-form" type="submit" value="送信">
 </div>
+%>
