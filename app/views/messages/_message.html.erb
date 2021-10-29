@@ -16,7 +16,9 @@
     </div>
       <%# 
        image_tag message.image, class: 'message-image' ←だけだと画像無でも読み込みエラー
-                                                          ↓画像有のみimage_tag読み込み%>
-      <%= image_tag message.image, class: 'message-image' if message.image.attached? %>
+                                                           画像有のみimage_tag読み込み
+      <%= image_tag message.image, class: 'message-image' if message.image.attached?  ↓イメージのサイズ指定有%>
+      <%= image_tag message.image.variant(resize: '500x500'), class: 'message-image' if message.image.attached? %>
+
   </div>
 </div>
