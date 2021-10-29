@@ -19,6 +19,9 @@ class MessagesController < ApplicationController
 
   private
   def message_params
-    params.require(:message).permit(:content).merge(user_id: current_user.id)
+    # params.require(:message).permit(:content,ここに:image).merge(user_id: current_user.id)
+    #                                           imageという名の画像ファイルの保存を許可
+    params.require(:message).permit(:content, :image).merge(user_id: current_user.id)
+
   end
 end
