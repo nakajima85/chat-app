@@ -5,18 +5,26 @@
   <div class="chat-content">
     <%# <a href="#">Chatタイトル</a> %>
     <div class="content-name">
-      Chatタイトル
+      <%# Chatタイトル %>
+      <%= @room.name %>
     </div>
   </div>
   <div class="chat-end">
     <div class="end-btn">
-      <a href="#">チャットを終了する</a>
+      <%# <a href="#">チャットを終了する</a> %>
+      <%= link_to "チャットを終了する", room_path(@room), method: :delete %>
+            
     </div>
   </div>
 </div>
 
 <%# 中 %>
+<div class="main-center">
+  <%= render partial: 'message', collection: @messages %>
+</div>
 
+
+<%# ここから 
 <div class="main-center">
   <div class="chat-text">
     <div class="text-users">
@@ -34,7 +42,6 @@
     </div>
   </div>
 
-<%# ここから %>
   <div class="chat-text">
     <div class="text-users">
       <div class="user-name">
@@ -50,12 +57,25 @@
       </div>
     </div>
   </div>
-<%# ここまで、仮記述 %>
-
 </div>
+    ここまで、仮記述 %>
 
 <%# 下 %>
 
+<%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
+  <div class="main-under">
+    <%= f.text_field :content, class: 'input-form', placeholder: "type a message" %>
+      <label class="form-image">
+        <span class="image-file">画像</span>
+        <%= f.file_field :image, class: 'hidden' %>
+      </label>
+    <%= f.submit "送信", class: "submit-form" %>
+  </div>
+<% end %>
+
+
+
+<%# 以下見た目のみの記述
 <div class="main-under">
   <div class="under-input">
     <input class="input-form" placeholder= "type a message">
@@ -66,3 +86,4 @@
   </div>
   <input class="submit-form" type="submit" value="送信">
 </div>
+%>
