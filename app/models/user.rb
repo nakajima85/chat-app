@@ -6,6 +6,9 @@ class User < ApplicationRecord
 
   validates :name, presence: true
   # presence: true を設ける⇨空の場合はDBに保存しない
+  # nameだけバリデーションなのは、他カラムはdeviseに標準設定されているから、nameは追加の意
+
+  # のちにRSpecでテストするvalid?類
 
   has_many :room_users
   has_many :rooms, through: :room_users

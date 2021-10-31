@@ -8,4 +8,5 @@ class Room < ApplicationRecord
   has_many :messages, dependent: :destroy
 
   validates :name, presence: true
+  # のちのRSpecでテストするvalid?類
 end
